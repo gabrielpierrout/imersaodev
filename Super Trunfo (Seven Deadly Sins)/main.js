@@ -68,17 +68,58 @@ var carta7 = {
   }
 }
 
-var cartas = [carta1, carta2, carta3, carta4, carta5, carta6, carta7]
+var carta8 = {
+  nome: 'Meliodas(Marca Negra)',
+  imagem: 'images/meliodas2.jpg',
+  atributos: {
+    Magia: 3000,
+    Força: 50000,
+    Espírito: 3000
+  }
+}
+
+var carta9 = {
+  nome: 'Escanor(The One)',
+  imagem: 'images/escanor2.jpg',
+  atributos: {
+    Magia: 99999,
+    Força: 99999,
+    Espírito: 99999
+  }
+}
+
+var carta10 = {
+  nome: 'Zeldris(Piedade)',
+  imagem: 'images/zeldris.png',
+  atributos: {
+    Magia: 10000,
+    Força: 47200,
+    Espírito: 3800
+  }
+}
+
+var cartas = [
+  carta1,
+  carta2,
+  carta3,
+  carta4,
+  carta5,
+  carta6,
+  carta7,
+  carta8,
+  carta9,
+  carta10
+]
 var cartaMaquina
 var cartaJogador
 
 function sortearCarta() {
-  var numeroCartaMaquina = parseInt(Math.random() * 7)
+  var numeroCartaMaquina = parseInt(Math.random() * 10)
   cartaMaquina = cartas[numeroCartaMaquina]
 
-  var numeroCartaJogador = parseInt(Math.random() * 7)
+  var numeroCartaJogador = parseInt(Math.random() * 10)
   while (numeroCartaMaquina == numeroCartaJogador) {
-    numeroCartaJogador = parseInt(Math.random() * 7)
+    numeroCartaJogador = parseInt(Math.random() * 10)
   }
   cartaJogador = cartas[numeroCartaJogador]
   console.log(cartaJogador)
